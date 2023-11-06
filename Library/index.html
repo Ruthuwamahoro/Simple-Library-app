@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Libary</title>
+    <link rel="stylesheet" href="style2.css" id="theme-style" />
+    <script
+      src="https://kit.fontawesome.com/744fa18e3f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="dark-mode">
+    <nav>
+      <div>
+        <a href="#" onclick="MyFunction()" aria-label="Switch to Dark Mode">
+          <i class="fa-solid fa-moon" id="moon"></i>
+        </a>
+        <a href="#" onclick="MyFunction()" aria-label="Switch to Light Mode">
+          <i class="fa-regular fa-sun-bright" id="light"></i>
+        </a>
+      </div>
+    </nav>
+    <div id="big-container">
+      <div id="word">
+        <h1>Library-app</h1>
+        <p>Welcome to Library-app .Feel free to add books</p>
+        <span>Want to add<button id="new-book">NEW BOOK</button> </span>
+      </div>
+
+      <div id="container">
+        <form action="#">
+          <label for="author">Author</label><br /><input
+            type="text"
+            name="author"
+            id="author"
+            required
+          />
+          <label for="title">Title </label><br /><input
+            type="text"
+            name="title"
+            id="title"
+            required
+          />
+          <label for="pages">Number of Pages </label><br /><input
+            type="number"
+            name="pages"
+            id="pages"
+            required
+          />
+          <div div="status-container">
+            <label for="read">Status </label>
+            <select name="read" id="read">
+              <option value="Read" checked>read</option>
+              <option value="Not read">unread</option>
+            </select>
+          </div>
+
+          <button type="submit" id="submit">ADD BOOK</button>
+        </form>
+      </div>
+    </div>
+    <!-- Add this table to your HTML -->
+    <table id="book-table">
+      <thead>
+        <tr>
+          <th>Author</th>
+          <th>Title</th>
+          <th>Pages</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="book-list"></tbody>
+    </table>
+
+    <script src="script2.js"></script>
+  </body>
+</html>
